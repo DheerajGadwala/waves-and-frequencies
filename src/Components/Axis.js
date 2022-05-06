@@ -3,16 +3,13 @@ import './Axis.css';
 
 const Axis = (props) => {
 
-  const [speed, setSpeed] = useState(null);
-  const [speedInter, setSpeedInter] = useState(null);
+  const [speed, setSpeed] = useState(0.5 + Math.random()*3);
 
   useEffect(() => {
-    clearInterval(speedInter);
     var circle = document.querySelector('.circle'+props.id);
     var angle = 0;
     var radius = 35; // percentage
-    if (speed !== null) {
-      var interval = setInterval(() => {
+    var interval = setInterval(() => {
         angle = (angle + speed) % 360;
         var y = radius * Math.sin(angle / 180 * Math.PI);
         var x = radius * Math.cos(angle / 180 * Math.PI);
@@ -21,14 +18,15 @@ const Axis = (props) => {
         props.setX(x);
         props.setY(y);
       }, 2);
-      setSpeedInter(interval);
-    }
+
+    return ()=>{clearInterval(interval)};
+
   }, [speed, props.reset]);
 
   return (
     <div className = "container">
       <span className = "axisTitle">{props.id}-axis frequency</span>
-      <input type = "range" className="speedController" min="0" max="5" step="0.05" value="0" onChange={(e)=>{
+      <input type = "range" className="speedController" min="0.5" max="8" step="0.05" value={speed} onChange={(e)=>{
           setSpeed(parseFloat(e.target.value));
           props.setReset(!props.reset);
       }}/>

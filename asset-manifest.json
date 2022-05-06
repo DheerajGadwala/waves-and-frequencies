@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/waves-and-frequencies/static/css/main.83578f41.css",
-    "main.js": "/waves-and-frequencies/static/js/main.5d4f71a8.js",
+    "main.js": "/waves-and-frequencies/static/js/main.e27bf0c9.js",
     "static/js/787.c42c205c.chunk.js": "/waves-and-frequencies/static/js/787.c42c205c.chunk.js",
     "index.html": "/waves-and-frequencies/index.html",
     "main.83578f41.css.map": "/waves-and-frequencies/static/css/main.83578f41.css.map",
-    "main.5d4f71a8.js.map": "/waves-and-frequencies/static/js/main.5d4f71a8.js.map",
+    "main.e27bf0c9.js.map": "/waves-and-frequencies/static/js/main.e27bf0c9.js.map",
     "787.c42c205c.chunk.js.map": "/waves-and-frequencies/static/js/787.c42c205c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83578f41.css",
-    "static/js/main.5d4f71a8.js"
+    "static/js/main.e27bf0c9.js"
   ]
 }
